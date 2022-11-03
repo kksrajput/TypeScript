@@ -1,33 +1,36 @@
-"use strict";
 //--noEmitOnError
 //tsc --noEmitOnError --target ES5 Customer.ts
 //tsc --init
-class Customer {
-    constructor(_firstName, _lastName) {
-        this._firstName = _firstName;
-        this._lastName = _lastName;
-    } //parameter properties
+class Customer1{
+    
+     
+    constructor(private _firstName: string,private _lastName: string){
+        
+    }//parameter properties
     // getFirstName():string{
     //     return this.firstName;
     // }
     // setFirstName(theFirst:string):void{
     //     this.firstName = theFirst;
     // }
-    get firstName() {
+    get firstName():string{
         return this._firstName;
     }
-    set firstName(theFirst) {
+    set firstName(theFirst: string){
         this._firstName = theFirst;
     }
-    get lastName() {
+    get lastName():string{
         return this._lastName;
     }
-    set lastName(value) {
+    set lastName(value:string){
         this._lastName = value;
     }
+
 }
-let myCustomer = new Customer("Singh", "Ash");
+
+let myCustomer = new Customer1("Singh","Ash");
 // myCustomer.setFirstName("ASH");
+
 // myCustomer.firstName = "Ash";
 // myCustomer.lastName = "Singh";
 console.log(myCustomer.firstName);

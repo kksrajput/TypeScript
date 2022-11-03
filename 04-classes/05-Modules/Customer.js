@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Customer = void 0;
 //--noEmitOnError
 //tsc --noEmitOnError --target ES5 Customer.ts
 //tsc --init
@@ -6,13 +8,7 @@ class Customer {
     constructor(_firstName, _lastName) {
         this._firstName = _firstName;
         this._lastName = _lastName;
-    } //parameter properties
-    // getFirstName():string{
-    //     return this.firstName;
-    // }
-    // setFirstName(theFirst:string):void{
-    //     this.firstName = theFirst;
-    // }
+    }
     get firstName() {
         return this._firstName;
     }
@@ -26,10 +22,4 @@ class Customer {
         this._lastName = value;
     }
 }
-let myCustomer = new Customer("Singh", "Ash");
-// myCustomer.setFirstName("ASH");
-// myCustomer.firstName = "Ash";
-// myCustomer.lastName = "Singh";
-console.log(myCustomer.firstName);
-console.log(myCustomer.lastName);
-// console.log(myCustomer.lastName)
+exports.Customer = Customer;
